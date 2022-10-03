@@ -36,7 +36,6 @@ def sum_series (v, k):
     partial_lines = v//k**i
     total_lines += partial_lines
     i += 1
-    print("partial lines:", partial_lines)
     if (partial_lines == 0):
       break
   return total_lines
