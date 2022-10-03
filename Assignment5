@@ -31,14 +31,15 @@ import time
 #         returns the sum of the series
 def sum_series (v, k):
   i = 1
-  sum = v
+  total_lines = v
   while(True):
-    quicksum = v//k**i
-    sum = quicksum + sum
+    partial_lines = v//k**i
+    total_lines += partial_lines
     i += 1
-    if quicksum == 0:
+    print("partial lines:", partial_lines)
+    if (partial_lines == 0):
       break
-  return sum
+  return total_lines
 
 
 
@@ -104,6 +105,7 @@ def main():
 
     print()
     print()
+    
 
 if __name__ == "__main__":
   main()
